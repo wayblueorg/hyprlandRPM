@@ -11,11 +11,13 @@ ExcludeArch:    %{ix86}
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
+BuildRequires:  git
 BuildRequires:  pkgconfig(hyprlang)
 BuildRequires:  pkgconfig(hyprtoolkit)
 BuildRequires:  pkgconfig(pixman-1)
 BuildRequires:  pkgconfig(libdrm)
 BuildRequires:  pkgconfig(hyprutils)
+BuildRequires:  pkgconfig(xkbcommon)
 
 Obsoletes: 	hyprland-qtutils <= 0.1.5
 
