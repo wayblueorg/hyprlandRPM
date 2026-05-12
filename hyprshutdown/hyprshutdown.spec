@@ -1,13 +1,11 @@
 Name:    	hyprshutdown
-Version: 	0.1.0
-Release: 	%autorelease -b7
+Version: 	0.1.1
+Release: 	%autorelease
 Summary: 	A graceful shutdown utility for Hyprland
 License: 	BSD-3-Clause license
 URL:     	https://github.com/hyprwm/hyprshutdown
 
 Source:         %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-# Backport fix for lua
-Patch: 		https://github.com/hyprwm/hyprshutdown/commit/f70097e670adddb5a02fb0994804532d6b483b72.patch
 
 BuildRequires: 	gcc-c++
 BuildRequires: 	cmake
@@ -27,7 +25,7 @@ Requires:	systemd
 hyprshutdown is a graceful shutdown/logout utility for Hyprland, which prevents apps from crashing / dying unexpectedly..
 
 %prep
-%autosetup -p1
+%autosetup
 
 %build
 %cmake
