@@ -1,6 +1,10 @@
 #!/usr/bin/bash
 set -euxo pipefail
 
+# Do all operations on prerelease-track
+git fetch --all
+git switch prerelease-track
+
 ec=0
 newRelease=0
 curl_opts=(--connect-timeout 10 --retry 7 --retry-connrefused -Ss -X POST)
@@ -55,15 +59,6 @@ pushd ../hyprland-plugins && \
 bash plugins_update.sh;
 popd && \
 git commit -am "up rev hyprland-git-${newTag}+${newHyprlandCommit:0:7}" && \
-git push && \
-hyprlandGitBuildId=$(curl "${curl_opts[@]}" "https://copr.fedorainfracloud.org/webhooks/custom/205252/${COPR_WEBHOOK}/hyprland-git") && \
-copr watch-build "${hyprlandGitBuildId}" && \
-curl "${curl_opts[@]}" "https://copr.fedorainfracloud.org/webhooks/custom/205252/${COPR_WEBHOOK}/hyprland-plugins-git"; }
+git push
+}
 
-if [[ $newRelease == "1" ]]; then
-    hyprlandBuildId=$(curl "${curl_opts[@]}" "https://copr.fedorainfracloud.org/webhooks/custom/205252/${COPR_WEBHOOK}/hyprland")
-    copr watch-build "${hyprlandBuildId}"
-    curl "${curl_opts[@]}" "https://copr.fedorainfracloud.org/webhooks/custom/205252/${COPR_WEBHOOK}/hyprland-plugins"
-    git branch "$newTag"
-    git push origin "$newTag"
-fi
