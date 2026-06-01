@@ -1,28 +1,16 @@
--- Core stuff
--- Programs
-local terminal = "kitty"
-local filemanager = "thunar"
-local menu = "hyprlauncher"
--- Mod key
-local mainMod = "SUPER"
-
-
--- References
 -- Monitors / Displays
-require("configs/monitors.lua")
+require("configs/monitors")
 -- Autostarts
-require("configs/autostarts.lua")
+require("configs/autostarts")
 -- Appearance / look and feel
-require("configs/appearance.lua")
+require("configs/appearance")
 -- Input settings
-require("configs/input.lua")
+require("configs/input")
 -- Keybindings
-require("configs/binds.lua")
--- Window rules
-require("configs/windowRules.lua")
+require("configs/binds")
 -- Environmental Variables
-require("configs/envs.lua")
--- miscellenous 
-require("configs/misc.lua")
+require("configs/envs")
+-- Miscellaneous
+require("configs/misc")
 -- Window rules
-require("configs/rules.lua")
+require("configs/rules")

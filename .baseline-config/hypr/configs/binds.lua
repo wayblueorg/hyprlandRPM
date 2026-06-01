@@ -1,7 +1,7 @@
 local mainMod = "SUPER"
 
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(kitty))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(hyprlauncher))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprlauncher"))
 
 -- Move focus with mainMod + hjkl
 hl.bind(mainMod .. " + h",  hl.dsp.focus({ direction = "left" }))
@@ -20,7 +20,7 @@ for i = 1, 10 do
 end
 
 -- Lock screen (hyprlock)
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(hyprlock))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("hyprlock"))
 
 -- Exit hyprland
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
