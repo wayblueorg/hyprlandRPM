@@ -37,12 +37,12 @@ createrepo_c ~/rpmbuild/RPMS/noarch/
 createrepo_c ~/rpmbuild/RPMS/x86_64/
 createrepo_c ~/rpmbuild/RPMS/noarch/
 # Phase 4
-# ./test-build.sh hyprland-git hyprland-git.spec
 "$SCRIPTDIR"/test-build.sh hyprpaper hyprpaper.spec
 "$SCRIPTDIR"/test-build.sh hyprland-guiutils hyprland-guiutils.spec
 "$SCRIPTDIR"/test-build.sh hyprlauncher hyprlauncher.spec
 "$SCRIPTDIR"/test-build.sh hyprsysteminfo hyprsysteminfo.spec
 "$SCRIPTDIR"/test-build.sh hyprpwcenter hyprpwcenter.spec
 "$SCRIPTDIR"/test-build.sh hyprshutdown hyprshutdown.spec
+"$SCRIPTDIR"/test-build.sh hyprland-git hyprland-git.spec
 createrepo_c ~/rpmbuild/RPMS/x86_64/
 createrepo_c ~/rpmbuild/RPMS/noarch/
