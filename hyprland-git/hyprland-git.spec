@@ -1,8 +1,8 @@
-%global hyprland_commit 7a75ce5f209d8142c40dfe6dd8bb03749987e11d
+%global hyprland_commit d25137923679c3c07ddd67479ad3bc7c616cd9c3
 %global hyprland_shortcommit %(c=%{hyprland_commit}; echo ${c:0:7})
-%global bumpver 12
-%global commits_count 7483
-%global commit_date Thu Jun 18 05:21:20 2026
+%global bumpver 27
+%global commits_count 7514
+%global commit_date Sat Jun 27 01:21:34 2026
 
 %global protocols_commit 3a5c2bda1c1a4e55cc1330c782547695a93f05b2
 %global protocols_shortcommit %(c=%{protocols_commit}; echo ${c:0:7})
@@ -64,6 +64,7 @@ hyprdeps = {
     "pkgconfig(libseat)",
     "pkgconfig(libudev)",
     "pkgconfig(lua)",
+    "pkgconfig(readline)",
     "pkgconfig(pango)",
     "pkgconfig(pangocairo)",
     "pkgconfig(pixman-1)",
