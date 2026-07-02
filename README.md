@@ -23,6 +23,6 @@ Special thanks to solopasha, who originally created these specs, and LionHeartP 
 
 For the sanity of the maintainers, given the fast-paced nature of hyprland development, the master branch is updated to the latest versions of each package every other Saturday. The prerelease-track branch will contain newer packages, but will not be tested; use at your own risk.
 
-- [`master` copr](https://copr.fedorainfracloud.org/coprs/craftidore/wayblue-hyprland/)
+- [`master` copr](https://copr.fedorainfracloud.org/coprs/craftidore/wayblueorg-hyprland/)
 - [`prerelease-track` copr](https://copr.fedorainfracloud.org/coprs/craftidore/hyprland-prerelease-track/)
 
