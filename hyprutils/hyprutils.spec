@@ -1,5 +1,8 @@
 Name:           hyprutils
 Version:        0.14.0
+Release:        %autorelease
+Summary:        Hyprland utilities library used across the ecosystem
+
 License:        BSD-3-Clause
 URL:            https://github.com/hyprwm/hyprutils
 Source:         %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
