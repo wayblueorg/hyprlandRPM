@@ -59,6 +59,7 @@ hyprdeps = {
     "pkgconfig(lcms2)",
     "pkgconfig(libdisplay-info)",
     "pkgconfig(libdrm)",
+    "pkgconfig(libeis)",
     "pkgconfig(libinput) >= 1.28",
     "pkgconfig(libliftoff)",
     "pkgconfig(libseat)",
