@@ -41,7 +41,7 @@ hyprdeps = {
     "gcc-c++",
     "meson",
     "muParser-devel",
-    "libeis-devel"
+    "libeis-devel",
     "glaze-static",
     "pkgconfig(aquamarine)",
     "pkgconfig(cairo)",
