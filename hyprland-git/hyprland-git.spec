@@ -43,6 +43,7 @@ hyprdeps = {
     "muParser-devel",
     "libeis-devel",
     "libcanberra-devel",
+    "sdbus-cpp-tools",
     "glaze-static",
     "pkgconfig(aquamarine)",
     "pkgconfig(cairo)",
