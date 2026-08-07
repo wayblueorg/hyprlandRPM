@@ -59,6 +59,7 @@ hyprdeps = {
     "pkgconfig(hyprwire)",
     "pkgconfig(lcms2)",
     "pkgconfig(libdisplay-info)",
+    "libcanberra",
     "pkgconfig(libdrm)",
     "pkgconfig(libinput) >= 1.28",
     "pkgconfig(libliftoff)",
