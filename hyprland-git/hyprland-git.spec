@@ -238,6 +238,12 @@ source /usr/lib/gcc-toolset/15-env.source
 
 %cmake_install
 install -Dpm644 %{SOURCE4} -t %{buildroot}%{_rpmconfigdir}/macros.d
+if [ "%{_libdir}/systemd/user" != "%{_userunitdir}" ]; then
+  mkdir -p %{buildroot}%{_userunitdir}
+  mv %{buildroot}%{_libdir}/systemd/user/hyprland-session.target \
+     %{buildroot}%{_userunitdir}/
+  rmdir -p --ignore-fail-on-non-empty %{buildroot}%{_libdir}/systemd/user
+fi
 
 
 %files
