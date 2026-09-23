@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(pixman-1)
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(xkbcommon)
-BuildRequires:  pkgconfig(abseil-cpp)
+BuildRequires:  abseil-cpp-devel
 BuildRequires:  gtest-devel
 
 %description
