@@ -25,7 +25,7 @@ BuildRequires:  pkgconfig(hyprgraphics)
 BuildRequires:  pkgconfig(hyprlang)
 BuildRequires:  pkgconfig(pixman-1)
 BuildRequires:  pkgconfig(libdrm)
-BuildRequires:  pkgconfig(sdbus-cpp)
+BuildRequires:  sdbus-cpp-devel
 
 Requires:       hyprland-qt-support%{?_isa}
 
