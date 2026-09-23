@@ -20,6 +20,12 @@ BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  pkgconfig(hyprutils)
 BuildRequires:  pkgconfig(polkit-agent-1)
 BuildRequires:  pkgconfig(polkit-qt6-1)
+BuildRequires:  pkgconfig(hyprtoolkit)
+BuildRequires:  pkgconfig(hyprgraphics)
+BuildRequires:  pkgconfig(hyprlang)
+BuildRequires:  pkgconfig(pixman-1)
+BuildRequires:  pkgconfig(libdrm)
+BuildRequires:  pkgconfig(sdbus-cpp)
 
 Requires:       hyprland-qt-support%{?_isa}
 
