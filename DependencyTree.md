@@ -46,7 +46,7 @@
 - hyprsunset
     - Fulfilled: pkgconfig(hyprland-protocols), pkgconfig(hyprlang), pkgconfig(hyprutils), pkgconfig(hyprwayland-scanner)
 - hyprpolkitagent
-    - Fulfilled: pkgconfig(hyprutils)
+    - Fulfilled: pkgconfig(hyprutils), pkgconfig(hyprtoolkit)
     - Runtime-Requires: hyprland-qt-support
 - hyprland-qt-support 
     - Fulfilled: pkgconfig(hyprlang)
@@ -70,7 +70,6 @@
     - hyprlang
     - hyprwire
     - hyprpicker (optional)
-    - hyprpolkitagent (optional)
 - Phase 3:
     - hyprtoolkit
     - hyprcursor
@@ -88,3 +87,4 @@
     - hyprsysteminfo (optional)
     - hyprpwcenter (optional)
     - hyprshutdown (optional)
+    - hyprpolkitagent (optional)
