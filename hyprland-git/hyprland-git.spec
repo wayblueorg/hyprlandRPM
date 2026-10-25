@@ -28,7 +28,6 @@ License:        BSD-3-Clause AND BSD-2-Clause AND HPND-sell-variant AND LGPL-2.1
 URL:            https://github.com/hyprwm/Hyprland
 %if 0%{?bumpver}
 Source0:        %{url}/archive/%{hyprland_commit}/%{name}-%{hyprland_shortcommit}.tar.gz
-Source2:        https://github.com/hyprwm/hyprland-protocols/archive/%{protocols_commit}/protocols-%{protocols_shortcommit}.tar.gz
 Source3:        https://github.com/canihavesomecoffee/udis86/archive/%{udis86_commit}/udis86-%{udis86_shortcommit}.tar.gz
 %else
 Source0:        %{url}/releases/download/v%{version}/source-v%{version}.tar.gz
@@ -52,6 +51,7 @@ hyprdeps = {
     "pkgconfig(hwdata)",
     "pkgconfig(hyprcursor)",
     "pkgconfig(hyprgraphics)",
+    "pkgconfig(hyprland-protocols) >= 0.8.0",
     "pkgconfig(hyprlang)",
     "pkgconfig(hyprutils)",
     "pkgconfig(hyprwayland-scanner)",
@@ -197,7 +197,6 @@ Requires:       pkgconfig(xkbcommon)
 # Fedora names it lua.pc . The correct version is ensured in the BuildRequires section
 sed -i 's/lua55/lua/g' CMakeLists.txt
 %if 0%{?bumpver}
-tar -xf %{SOURCE2} -C subprojects/hyprland-protocols --strip=1
 tar -xf %{SOURCE3} -C subprojects/udis86 --strip=1
 sed -e '/GIT_COMMIT_HASH/s/unknown/%{hyprland_commit}/' \
     -e '/GIT_BRANCH/s/unknown/main/' \
@@ -208,7 +207,6 @@ sed -e '/GIT_COMMIT_HASH/s/unknown/%{hyprland_commit}/' \
     -i CMakeLists.txt
 %endif
 
-cp -p subprojects/hyprland-protocols/LICENSE LICENSE-hyprland-protocols
 cp -p subprojects/udis86/LICENSE LICENSE-udis86
 
 sed -i \
@@ -247,7 +245,7 @@ fi
 
 
 %files
-%license LICENSE LICENSE-udis86 LICENSE-hyprland-protocols
+%license LICENSE LICENSE-udis86
 %{_bindir}/[Hh]yprland
 %{_bindir}/hyprctl
 %{_bindir}/hyprpm
