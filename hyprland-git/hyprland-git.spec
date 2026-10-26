@@ -1,10 +1,10 @@
-%global hyprland_commit 663b29b846e4bad17cfa29941f6d2fbb6b61f139
+%global hyprland_commit 390f8f8297911620d5dcb226520ba0cf21e43479
 %global hyprland_shortcommit %(c=%{hyprland_commit}; echo ${c:0:7})
-%global bumpver 81
-%global commits_count 7901
-%global commit_date Thu Oct 08 23:31:03 2026
+%global bumpver 100
+%global commits_count 7959
+%global commit_date Sat Oct 24 06:55:13 2026
 
-%global protocols_commit cc9a8fd253bdc00f48a967ecf4828211ef08751f
+%global protocols_commit null
 %global protocols_shortcommit %(c=%{protocols_commit}; echo ${c:0:7})
 
 %global udis86_commit 5336633af70f3917760a6d441ff02d93477b0c86
@@ -28,7 +28,6 @@ License:        BSD-3-Clause AND BSD-2-Clause AND HPND-sell-variant AND LGPL-2.1
 URL:            https://github.com/hyprwm/Hyprland
 %if 0%{?bumpver}
 Source0:        %{url}/archive/%{hyprland_commit}/%{name}-%{hyprland_shortcommit}.tar.gz
-Source2:        https://github.com/hyprwm/hyprland-protocols/archive/%{protocols_commit}/protocols-%{protocols_shortcommit}.tar.gz
 Source3:        https://github.com/canihavesomecoffee/udis86/archive/%{udis86_commit}/udis86-%{udis86_shortcommit}.tar.gz
 %else
 Source0:        %{url}/releases/download/v%{version}/source-v%{version}.tar.gz
@@ -52,6 +51,7 @@ hyprdeps = {
     "pkgconfig(hwdata)",
     "pkgconfig(hyprcursor)",
     "pkgconfig(hyprgraphics)",
+    "pkgconfig(hyprland-protocols) >= 0.8.0",
     "pkgconfig(hyprlang)",
     "pkgconfig(hyprutils)",
     "pkgconfig(hyprwayland-scanner)",
@@ -197,7 +197,6 @@ Requires:       pkgconfig(xkbcommon)
 # Fedora names it lua.pc . The correct version is ensured in the BuildRequires section
 sed -i 's/lua55/lua/g' CMakeLists.txt
 %if 0%{?bumpver}
-tar -xf %{SOURCE2} -C subprojects/hyprland-protocols --strip=1
 tar -xf %{SOURCE3} -C subprojects/udis86 --strip=1
 sed -e '/GIT_COMMIT_HASH/s/unknown/%{hyprland_commit}/' \
     -e '/GIT_BRANCH/s/unknown/main/' \
@@ -208,7 +207,6 @@ sed -e '/GIT_COMMIT_HASH/s/unknown/%{hyprland_commit}/' \
     -i CMakeLists.txt
 %endif
 
-cp -p subprojects/hyprland-protocols/LICENSE LICENSE-hyprland-protocols
 cp -p subprojects/udis86/LICENSE LICENSE-udis86
 
 sed -i \
@@ -247,7 +245,7 @@ fi
 
 
 %files
-%license LICENSE LICENSE-udis86 LICENSE-hyprland-protocols
+%license LICENSE LICENSE-udis86
 %{_bindir}/[Hh]yprland
 %{_bindir}/hyprctl
 %{_bindir}/hyprpm
