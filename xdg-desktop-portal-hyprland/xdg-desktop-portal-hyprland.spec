@@ -2,7 +2,7 @@
 
 Name:           xdg-desktop-portal-hyprland
 Epoch:          1
-Version:        1.4.1
+Version:        1.5.0
 Release:        %autorelease
 Summary:        xdg-desktop-portal backend for hyprland
 
@@ -18,6 +18,7 @@ BuildRequires:  systemd-rpm-macros
 BuildRequires:  pkgconfig(gbm)
 BuildRequires:  pkgconfig(hyprland-protocols)
 BuildRequires:  pkgconfig(hyprlang)
+BuildRequires:  pkgconfig(hyprtoolkit)
 BuildRequires:  pkgconfig(hyprutils)
 BuildRequires:  pkgconfig(hyprwayland-scanner)
 BuildRequires:  pkgconfig(libdrm)

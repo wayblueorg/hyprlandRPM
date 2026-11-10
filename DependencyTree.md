@@ -18,7 +18,7 @@
     - pkgconfig(hyprwire)
         - Fulfilled: pkgconfig(hyprutils)
 - xdg-desktop-portal-hyprland
-    - Fulfilled: pkgconfig(hyprlang), pkgconfig(hyprutils), pkgconfig(hyprwayland-scanner)
+    - Fulfilled: pkgconfig(hyprlang), pkgconfig(hyprutils), pkgconfig(hyprwayland-scanner), pkgconfig(hyprtoolkit)
     - pkgconfig(hyprland-protocols)
         - N/A
 - hyprpaper
@@ -73,7 +73,6 @@
 - Phase 3:
     - hyprtoolkit
     - hyprcursor
-    - xdg-desktop-portal-hyprland
     - hyprlock
     - hypridle
     - hyprsunset (optional)
@@ -83,6 +82,7 @@
     - hyprland-git
     - hyprpaper
     - hyprland-guiutils
+    - xdg-desktop-portal-hyprland
     - hyprlauncher (optional)
     - hyprsysteminfo (optional)
     - hyprpwcenter (optional)
