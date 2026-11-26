@@ -1,5 +1,5 @@
 Name:           hyprgraphics
-Version:        0.6.0
+Version:        0.7.0
 Release:        %autorelease
 Summary:        Hyprland graphics / resource utilities
 
@@ -25,7 +25,6 @@ BuildRequires:  pkgconfig(libmagic)
 BuildRequires:  pkgconfig(libwebp)
 BuildRequires:  pkgconfig(pixman-1)
 BuildRequires:  pkgconfig(libpng)
-BuildRequires:  pkgconfig(pangocairo)
 BuildRequires:  pkgconfig(libheif)
 BuildRequires:  pkgconfig(librsvg-2.0)
 
@@ -56,7 +55,7 @@ Development files for %{name}.
 %files
 %license LICENSE
 %doc README.md
-%{_libdir}/lib%{name}.so.5
+%{_libdir}/lib%{name}.so.6
 %{_libdir}/lib%{name}.so.%{version}
 
 %files devel
